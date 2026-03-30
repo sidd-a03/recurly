@@ -12,13 +12,22 @@ export default function Index() {
       <Link href="/onboarding" className="mt-4 rounded-lg bg-primary p-4 text-white">Onboarding</Link>
       <Link href="/(auth)/sign-up" className="mt-4 rounded-lg bg-primary p-4 text-white">Create Account</Link>
       <Link href="/(auth)/sign-in" className="mt-4 rounded-lg bg-primary p-4 text-white">Sign In</Link>
-      {/* <link href="/subscriptions/spotify">Spotify Subscription</link> */}
       <Link href={{
-        pathname: "/subsciptons/[id]",
+        pathname: "/subscriptons/[id]",
+        params: {
+          id: "spotify"
+        }
+      }}>
+        Spotify Subscription
+      </Link>
+      <Link href={{
+        pathname: "/subscriptons/[id]",
         params: {
           id: "claude"
         }
-      }}>Claude Max Subscription</Link>
+      }}>
+        Claude Max Subscription
+      </Link>
     </SafeAreaView>
   );
 }
