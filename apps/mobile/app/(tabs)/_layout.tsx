@@ -1,9 +1,9 @@
 import { tabs } from "@/constants/data";
 import { Tabs } from "expo-router";
 import { View, Image } from "react-native"
-import clsx from "clsx";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { components, colors } from "@/constants/theme";
+import { cn } from "@/lib/cn";
 
 const tabBar = components.tabBar;
 
@@ -14,7 +14,7 @@ export default function TabLayout() {
   const TabIcon = ({ focused, icon }: TabIconProps) => {
     return (
         <View className="tabs-icon">
-            <View className={clsx('tabs-pill', focused && 'tabs-active')}>
+            <View className={cn('tabs-pill', focused && 'tabs-active')}>
                 <Image source={icon} resizeMode="contain" className="tabs-glyph"/>
             </View>
         </View>
