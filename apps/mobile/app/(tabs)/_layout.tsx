@@ -4,7 +4,6 @@ import { View, Image } from "react-native"
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { components, colors } from "@/constants/theme";
 import { cn } from "@/lib/cn";
-import { StatusBar } from "expo-status-bar";
 
 const tabBar = components.tabBar;
 
@@ -23,8 +22,6 @@ export default function TabLayout() {
   }
 
   return(
-  <>
-    <StatusBar style="dark" />
     <Tabs
       screenOptions={{
           headerShown: false,
@@ -60,5 +57,4 @@ export default function TabLayout() {
           }} />
       ))}
     </Tabs>
-  </>
 )}

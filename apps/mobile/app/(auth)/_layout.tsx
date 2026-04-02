@@ -1,7 +1,6 @@
 import "@/global.css";
 import { useAuth } from "@clerk/expo";
 import { Redirect, Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
 
 export default function AuthLayout() {
      const { isSignedIn, isLoaded } = useAuth();
@@ -13,12 +12,9 @@ export default function AuthLayout() {
 
     // Redirect to home if user is already signed in
     if (isSignedIn) {
-        return <Redirect href="/(tabs)" />;
+        return <Redirect href="/" />;
     }
     return (
-        <>
-            <Stack screenOptions={{ headerShown: false }} />
-            <StatusBar style="dark" />
-        </>
+        <Stack screenOptions={{ headerShown: false }} />
     );
 } 
